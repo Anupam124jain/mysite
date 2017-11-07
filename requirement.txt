@@ -1,0 +1,13 @@
+certifi==2017.7.27.1
+chardet==3.0.4
+Django==1.11.4
+django-jsonfield==1.0.1
+django-stripe-payments==2.0.0
+idna==2.6
+MySQL-python==1.2.5
+pytz==2017.2
+razorpay==1.0.2
+requests==2.18.4
+six==1.11.0
+stripe==1.65.1
+urllib3==1.22
