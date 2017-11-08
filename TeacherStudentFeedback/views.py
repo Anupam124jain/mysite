@@ -48,7 +48,6 @@ def TeacherFeedback(request):
             student = Student.objects.get(id=request.POST['student_name'])
             student.student_rating = request.POST['student_rating']
             student.student_remarks = request.POST['student_remarks']
-            student.save()
             return render(request, 'success.html')
         else:
             return render(request, 'login.html')
