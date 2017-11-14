@@ -31,11 +31,10 @@ def TeacherLogin(request):
             teacher_login = Teacher(teacher_id=request.POST['teacher_id'],
                                     password=password
                                        )
-            teacher_login.save()
 
             return render(request, 'success.html')
         else:
-            return render(request, 'login.html')
+            return render(request, 'login.html', {'form': form})
     else:
         form = TeacherLoginForm()
         return render(request, 'login.html', {'form': form})

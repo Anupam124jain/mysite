@@ -12,13 +12,15 @@ class StudentInfo(models.Model):
     email = models.CharField(max_length = 100)
     password = models.CharField(max_length=100)
     branch = models.CharField(max_length = 50)
-    mobile_no = models.IntegerField()
+    mobile_no = models.CharField(max_length = 15)
     fees_status = models.BooleanField()
     student_type = models.CharField(max_length = 50)
-    sem = models.IntegerField()
+    sem = models.CharField(max_length = 10)
+    email_confirmed = models.BooleanField(default=False)
+    token = models.CharField(null=True, max_length=100)
 
     def __str__(self):
-        return self.enroll_id
+        return self.student_name
 
 
 class FeeStructure(models.Model):

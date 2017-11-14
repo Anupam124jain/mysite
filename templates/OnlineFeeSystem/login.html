@@ -1,0 +1,11 @@
+{% block content %}
+  <h2>Student Login</h2>
+  <form method="post">
+    {% csrf_token %}
+    <table>
+    {{ form.as_table }}
+    </table>
+    <button type="submit">Login</button><br/>
+    <a href="{% url 'forgot_password' %}">Forgot Password</a>
+  </form>
+{% endblock %}
